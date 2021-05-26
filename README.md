@@ -1,35 +1,5 @@
-<!-- PROJECT LOGO -->
-<br />
-<p align="center">
-  <a href="https://github.com/JohanHorsmans/cds-language-exam-2021">
-    <img src="../README_images/nlp2.png" alt="Logo" width="150" height="150">
-  </a>
-  
-  <h1 align="center">Cultural Data Science 2021</h1> 
-  <h3 align="center"><ins>Self Assigned Project:</ins>
-
-Danish hate speech detection</h3> 
-
-  <p align="center">
-    Johan Kresten Horsmans & Gustav Aarup Lauridsen
-    <br />
-    <a href="https://github.com/JohanHorsmans/cds-language-exam-2021/blob/main/Language_Analytics_Exam.pdf"><strong>Link to PDF with all portfolio descriptions »</strong></a>
-    <br />
-  </p>
-</p>
-
-<!-- TABLE OF CONTENTS -->
-<details open="open">
-  <summary>Table of Contents</summary>
-  <ol>
-    <li><a href="#contribution">Contribution</a></li>
-    <li><a href="#official-description-from-instructor">Official description from instructor</a></li>
-    <li><a href="#methods">Methods</a></li>
-    <li><a href="#how-to-run">How to run</a></li>
-    <li><a href="#repository-structure-and-contents">Repository structure and contents</a></li>
-    <li><a href="#discussion-of-results">Discussion of results</a></li>
-  </ol>
-</details>
+# Danish Hatespeech Detection using BERT
+This tool was made as a part of an exam in Cultural Data Science at Aarhus University
 
 <!-- CONTRIBUTION -->
 ## Contribution
@@ -53,7 +23,7 @@ In summary, the project is comprised of the following steps:
 <!-- METHODS -->
 ## Methods
 
-__NOTE: Some parts of the following section is repeated from [_assignment 5_](https://github.com/JohanHorsmans/cds-language-exam-2021/tree/main/assignment_5)__
+__NOTE: Some parts of the following section is repeated from [_assignment 5_](https://github.com/Guscode/cds-language-exam/tree/main/assignment_5)__
 
 For model training and testing, we are using the OffensEval2020 dataset containing 3000+ Danish comments from Ekstra Bladet and Reddit, labeled with a binary coding scheme indicating offensiveness (link: https://figshare.com/articles/dataset/Danish_Hate_Speech_Abusive_Language_data/12220805).
 
@@ -80,7 +50,13 @@ Our uploaded model can be found here, on huggingface.co: https://huggingface.co/
 <!-- HOW TO RUN -->
 ## How to run
 
-__NOTICE:__ To run the assignment, you need to have configured and activated your virtual environment. See the main [README](https://github.com/JohanHorsmans/cds-language-exam-2021/blob/main/README.md) for a guide on how to do this.
+To run the code, please clone this repository and activate the virtual environment langvenv
+```bash
+git clone https://github.com/Guscode/DKbert-hatespeech-detection.git
+cd DKbert-hatespeech-detection
+bash ./create_lang_venv.sh
+source ./langvenv/bin/activate
+```
 
 To evaluate the model, please refer to the _dk_hate_detect.py_-script, since this is the main tool. The _dk_hate_detect.ipynb_-notebook is mainly designed as a tutorial for non-expert users. Both contain the same model.
 
@@ -132,8 +108,8 @@ Go through the following steps to run the notebook:
 
 Navigate to the "self_assigned"-folder.
 Open the "dk_hate_detect.ipynb"-file.
-Make sure the kernel is set to _lang_venv_.
-You can do this by pressing "kernel" -> "change kernel" -> "lang_venv".
+Make sure the kernel is set to _langvenv_.
+You can do this by pressing "kernel" -> "change kernel" -> "langvenv".
 
 <!-- REPOSITORY STRUCTURE AND CONTENTS -->
 ## Repository structure and contents
@@ -161,8 +137,3 @@ Our model achieved a macro F1-score of 0.78. As stated in assignment 5, it is im
 
 As stated earlier, the currently best performing Danish hate speech model achieved a macro F1-score of 0.81 on the same dataset (as described in OffensEval2020). As such, we have not quite built the new gold-standard model for hate speech detection in Danish. Nonetheless, we have come very close, and our model would have finished 4th place (out of 38 contenders) in the OffensEval2020 competition. Furthermore, it is important to note that we have created the best __publically__ available Danish hate speech + a ready-to-use .py-script and a thorough Jupyter notebook tutorial on how to use it. Therefore, we argue that we have greatly improved the possibilities for an actual real-life implementation of such an algorithm. 
 
-<br />
-<p align="center">
-  <a href="https://github.com/JohanHorsmans/cds-visual-exam-2021">
-    <img src="../README_images/logo_au.png" alt="Logo" width="300" height="102">
-  </a>
