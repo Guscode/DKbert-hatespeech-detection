@@ -64,7 +64,7 @@ To run the script go through the following steps (__NOTE:__ you have to specify 
 ```bash
 cd {root directory (i.e. cds-language-exam-2021)}
 cd self_assigned
-python3 dk_hate_detect.py
+python3 dk_hate_detect.py --data "data/Test_hate.csv" --column "tweet"
 ```
 
 __You can specify the following arguments from the terminal:__
