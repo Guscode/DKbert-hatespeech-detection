@@ -62,8 +62,6 @@ To evaluate the model, please refer to the _dk_hate_detect.py_-script, since thi
 
 To run the script go through the following steps (__NOTE:__ you have to specify either the _--text_-argument or the _--data_ and _--column_-arguments to run the script):
 ```bash
-cd {root directory (i.e. cds-language-exam-2021)}
-cd self_assigned
 python3 dk_hate_detect.py --data "data/Test_Hate.csv" --column "tweet"
 ```
 
